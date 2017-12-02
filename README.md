@@ -1,1 +1,1 @@
-# harry-potter
+# Harry Potter Visualization
