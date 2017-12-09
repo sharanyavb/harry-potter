@@ -10,17 +10,6 @@ conn = "mongodb://admin:firebolt@ds125716.mlab.com:25716/heroku_bs24rhck"
 client = pymongo.MongoClient(conn)
 db = client.heroku_bs24rhck
 
-# Declare collections
-full = db.full
-stone = db.stone
-chamber = db.chamber
-prisoner = db.prisoner
-goblet = db.goblet
-phoenix = db.phoenix
-prince = db.prince
-hallows = db.hallows
-books = db.books
-
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -324,6 +313,24 @@ def hallows_senti():
 
     return jsonify(senti_results)
 
+@app.route("/family")
+def family():
+
+    # Empty list for family data
+    family_data = []
+
+    # Grab family tree data
+    results = db.family_tree.find()
+
+    for result in results:
+        character_info = {
+            "character": result["character"],
+            "image_url": result["image_url"]
+        }
+
+        family_data.append(character_info)
+
+    return jsonify(family_data)
 
 # Run app
 if __name__ == "__main__":
