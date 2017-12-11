@@ -1,0 +1,8 @@
+var data = [
+    {label:"Harry Potter", value1:19, value2:200},
+    {label:"Ginny Weasley", value1:5, value2:198},
+    {label:"Hermione Granger", value1:40, value2:155},
+    {label:"Ronald Weasley", value1:17, value2:100},
+    {label:"Fred Weasley", value1:77, value2:143},
+    {label:"George Weasley", value1:27, value2:143}
+];
