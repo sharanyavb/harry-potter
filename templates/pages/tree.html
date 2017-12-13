@@ -5,20 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Harry Potter</title>
-
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-
-    <link rel="stylesheet" href="../static/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="../../static/bar.js"></script> -->
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <link rel="stylesheet" href="../../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     
 </head>
 <body>
-    
+    <div class="jumbotron">
+        <div class="head">
+            <h1>THE <img src="../../static/images/HP-3-11.svg" style="width: 140px;"> PROJECT</h1>
+        </div>
+        <div class="container">
+            <div class="row-categories">
+                <div class="col-md-3">
+                    <h4 class="timeline"> <a href="pages/timeline.html">TIMELINE</a> </h4> 
+                </div> 
+                <div class="col-md-3">
+                    <h4 class="tree"> <a href="">FAMILY TREE</a></h4> 
+                </div>     
+                <div class="col-md-3">
+                    <h4 class="sentiment"> <a href="pages/sentiment.html">SENTIMENT</a></h4> 
+                </div>     
+                <div class="col-md-3">
+                    <h4 class="about"> <a href="pages/about.html">ABOUT</a></h4> 
+                </div>  
+            </div>
+        </div>      
+    </div>
 
-    <script src="../static/logic.js"></script>
+    <div id="svg-area"></div>
+    
+    <script src="../../static/tree.js"></script>
     
 </body>
 </html>
