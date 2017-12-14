@@ -11,7 +11,7 @@ body {
 .jumbotron {
     color: rgb(146, 146, 146) !important;
     background-color: rgb(58, 58, 58) !important;
-    width: 100% !important;
+    width: 1900px;
     
     font-family: 'Julius Sans One', sans-serif;
     padding-bottom: 25px;
@@ -69,8 +69,14 @@ body {
     border: 0 none;
     border-radius: 8px 8px 8px 8px;
     box-shadow: -3px 3px 15px #888888;
-    color: black;
+    color: white;
     font: 12px sans-serif;
     padding: 5px;
     text-align: center;
+    background-color: #888888;
+}
+
+h5 {
+    font-weight: bold;
+    text-decoration: underline;
 }

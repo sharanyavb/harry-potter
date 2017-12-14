@@ -1,6 +1,6 @@
 // SVG dimensions
-var svgWidth = 2000;
-var svgHeight = 1000;
+var svgWidth = 1900;
+var svgHeight = 750;
 
 // SVG area
 var svg = d3
@@ -11,6 +11,12 @@ var svg = d3
     .append("g")
     .attr("transform", "translate(350, 150)")
 
+// Div for tool tip
+var div = d3
+    .select("#svg-area")
+    .append("div")
+    .attr("class", "toolTip")
+
 // Arthur Weasley
 svg
     .append("image")
@@ -19,6 +25,15 @@ svg
     .attr("height", 100)
     .attr("x", 0)
     .attr("y", 0)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Arthur Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Head of the Office for the Detection and Confiscation of Counterfeit Defensive Spells and Protective Objects")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between Arthur & Molly
 svg
@@ -37,6 +52,15 @@ svg
     .attr("height", 100)
     .attr("x", 200)
     .attr("y", 0)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Molly Weasley (née Prewitt)</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br>")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Line to connect Weasley parents to children
 svg
@@ -71,6 +95,15 @@ svg
     .attr("height", 100)
     .attr("x", -250)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>William Arthur Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Curse Breaker for Gringotts Bank")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between Bill & Fleur
 svg
@@ -89,6 +122,15 @@ svg
     .attr("height", 100)
     .attr("x", -110)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Fleur Isabelle Weasley (née Delacour)</h4><hr><h5>Blood Status</h5>Quarter-Veela<br><h5>Occupation</h5>Part-time at Gringotts Bank")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Bill & Fleur's children
 svg
@@ -121,6 +163,15 @@ svg
     .attr("height", 100)
     .attr("x", -250)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Victoire Weasley</h4><hr><h5>Blood Status</h5>One-eighth Veela")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Dominique Weasley
 svg
@@ -137,6 +188,15 @@ svg
     .attr("height", 100)
     .attr("x", -110)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Dominique Weasley</h4><hr><h5>Blood Status</h5>One-eighth Veela")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Louis Weasley
 svg
@@ -153,6 +213,15 @@ svg
     .attr("height", 100)
     .attr("x", 30)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Louis Weasley</h4><hr><h5>Blood Status</h5>One-eight Veela")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Charlie Weasley
 svg
@@ -169,6 +238,15 @@ svg
     .attr("height", 100)
     .attr("x", 30)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Charles Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Dragonologist")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Percy Weasley
 svg
@@ -185,6 +263,15 @@ svg
     .attr("height", 100)
     .attr("x", 170)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Percy Ignatius Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Head of the Department of Magical Transportation")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between Percy & Audrey
 svg
@@ -203,6 +290,15 @@ svg
     .attr("height", 100)
     .attr("x", 310)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Audrey Weasley</h4>")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Percy & Audrey's Children
 svg
@@ -235,6 +331,15 @@ svg
     .attr("height", 100)
     .attr("x", 170)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Molly Weasley II</h4>")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Lucy Weasley
 svg
@@ -251,6 +356,15 @@ svg
     .attr("height", 100)
     .attr("x", 310)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Lucy Weasley</h4>");
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Fred Weasley
 svg
@@ -267,6 +381,16 @@ svg
     .attr("height", 100)
     .attr("x", 450)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Fred Weasley †</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Co-owner of Weasley's Wizard Wheezes")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
+
 
 // George Weasley
 svg
@@ -283,6 +407,15 @@ svg
     .attr("height", 100)
     .attr("x", 590)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>George Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Co-owner of Weasley's Wizard Wheezes")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between George & Angelina
 svg
@@ -301,6 +434,15 @@ svg
     .attr("height", 100)
     .attr("x", 730)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Angelina Weasley (née Johnson)</h4><hr><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // George & Angelina's children
 svg
@@ -333,6 +475,15 @@ svg
     .attr("height", 100)
     .attr("x", 450)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Fred Weasley II</h4>")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Roxanne Weasley
 svg
@@ -349,6 +500,15 @@ svg
     .attr("height", 100)
     .attr("x", 590)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Roxanne Weasley</h4>")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 
 // Ron Weasley
@@ -366,6 +526,15 @@ svg
     .attr("height", 100)
     .attr("x", 870)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Ronald Bilius Weasley</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Weasleys' Wizard Wheezes co-manager")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between Ron & Hermione
 svg
@@ -384,6 +553,16 @@ svg
     .attr("height", 100)
     .attr("x", 1010)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Hermione Jean Granger</h4><hr><h5>Blood Status</h5>Muggle-born<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Minister for Magic")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
+
 
 // Ron & Hermione's children
 svg
@@ -416,6 +595,15 @@ svg
     .attr("height", 100)
     .attr("x", 730)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Rose Granger-Weasley</h4><hr><h5>Blood Status</h5>Half-blood<br><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Hugo Granger-Weasley
 svg
@@ -432,6 +620,15 @@ svg
     .attr("height", 100)
     .attr("x", 870)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Hugo Granger-Weasley</h4><hr><h5>Blood Status</h5>Half-blood")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Ginny Weasley
 svg
@@ -448,6 +645,15 @@ svg
     .attr("height", 100)
     .attr("x", 1150)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Ginevra Molly Potter (née Weasley)</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Sports editor for the Daily Prophet")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between Ginny & Harry
 svg
@@ -466,6 +672,15 @@ svg
     .attr("height", 100)
     .attr("x", 1290)
     .attr("y", 185)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Harry James Potter</h4><hr><h5>Blood Status</h5>Half-blood<br><h5>House</h5>Gryffindor<br><h5>Occupation</h5>Head of the DMLE")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Line from James & Lily to Harry
 svg
@@ -484,6 +699,15 @@ svg
     .attr("height", 100)
     .attr("x", 1190)
     .attr("y", 0)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>James Potter †</h4><hr><h5>Blood Status</h5>Pure-blood<br><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Marriage between James & Lily
 svg
@@ -502,6 +726,15 @@ svg
     .attr("height", 100)
     .attr("x", 1390)
     .attr("y", 0)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Lily J. Potter (née Evans) †</h4><hr><h5>Blood Status</h5>Muggle-born<br><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Ginny & Harry's children
 svg
@@ -534,6 +767,15 @@ svg
     .attr("height", 100)
     .attr("x", 1010)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>James Sirius Potter</h4><hr><h5>Blood Status</h5>Half-blood<br><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Albus Potter
 svg
@@ -550,6 +792,15 @@ svg
     .attr("height", 100)
     .attr("x", 1150)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Ablus Severus Potter</h4><hr><h5>Blood Status</h5>Half-blood<br><h5>House</h5>Slytherin")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
 
 // Lily L. Potter
 svg
@@ -566,3 +817,12 @@ svg
     .attr("height", 100)
     .attr("x", 1290)
     .attr("y", 355)
+    .on("mouseover", function(){
+        div.style("left", d3.event.pageX+10+"px");
+        div.style("top", d3.event.pageY-25+"px");
+        div.style("display", "inline-block");
+        div.html("<h4>Lily Luna Potter</h4><hr><h5>Blood Status</h5>Half-blood<br><h5>House</h5>Gryffindor")
+    })
+    .on("mouseout", function(){
+        div.style("display", "none")
+    })
