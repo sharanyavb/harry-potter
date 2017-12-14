@@ -1,0 +1,109 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url("Hogwarts-Castle-Artbw.jpg");
+  background-repeat: repeat-y;
+}
+.bar:hover {
+  fill: rgb(0, 0, 0);
+}
+.jumbotron {
+    color: rgb(146, 146, 146) !important;
+    background-color: rgb(58, 58, 58) !important;
+    width: 100% !important;
+    
+    font-family: 'Julius Sans One', sans-serif;
+    padding-bottom: 25px;
+  }
+.row-categories {
+    padding-left: 250px;
+    padding-top: 50px;
+}
+.col-md-3 a:hover, .col-md-3 li a:active {
+    color: black !important;
+    text-decoration: none;
+}
+.col-md-3 a, .col-md-3 li a:visited {
+    color: rgb(146, 146, 146) !important;
+}
+.head {
+    text-align: center;
+}
+.container {
+    width:100%;
+}
+#chart {
+  top: 195px;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background-size: 100% 100%;
+  opacity: 0.3;
+} 
+/* check the following to make sure it's still needed */
+.btn-group-vertical {
+    margin-left: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    float:left;
+}
+.lines {
+    stroke-width: 2 !important;
+    stroke: rgba(0, 0, 0, 0.2) !important;
+    opacity: 1 !important;
+    stroke-dasharray: 5, 3;
+}
+#avatar {
+    border-radius: 50%;
+ }
+.toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: white;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+    background-color: #888888;
+}
+
+h5 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#images {
+    padding-top: 20px;
+}
+
+#names {
+    color: black;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#patronus {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+}
