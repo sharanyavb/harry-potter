@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background-image: url("Hogwarts-Castle-Artbw.jpg");
+  background-image: url("../templates/Hogwarts-Castle-Art.jpg");
   background-repeat: repeat-y;
 }
 .bar:hover {
@@ -82,17 +82,18 @@ h5 {
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 430px;
+    height: 480px;
     border-radius: 50%;
 }
 
 #images {
     padding-top: 20px;
+    padding-bottom: 100px;
 }
 
 #names {
-    color: black;
+    color: lightgray;
 }
 
 h1 {
